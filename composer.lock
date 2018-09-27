@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1f4f887de343131d98e245e664f1178",
+    "content-hash": "d0764e09b7e4d4631b726ae846f1f1dc",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.67.13",
+            "version": "3.67.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "10ad46f74bab23b8004bd337d131ec25072c8320"
+                "reference": "6c8bc0f42ba73bab85da67c3af9131e455c3f14c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/10ad46f74bab23b8004bd337d131ec25072c8320",
-                "reference": "10ad46f74bab23b8004bd337d131ec25072c8320",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6c8bc0f42ba73bab85da67c3af9131e455c3f14c",
+                "reference": "6c8bc0f42ba73bab85da67c3af9131e455c3f14c",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-09-17T20:34:45+00:00"
+            "time": "2018-09-26T20:06:30+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -435,17 +435,11 @@
         },
         {
             "name": "maxbanton/cwh",
-            "version": "v1.1.9",
+            "version": "dev-invalidToken",
             "source": {
                 "type": "git",
-                "url": "https://github.com/maxbanton/cwh.git",
-                "reference": "4034b71042280eafd569b757b58bf7d7675f0abc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/maxbanton/cwh/zipball/4034b71042280eafd569b757b58bf7d7675f0abc",
-                "reference": "4034b71042280eafd569b757b58bf7d7675f0abc",
-                "shasum": ""
+                "url": "https://github.com/Fulfillment-dot-com/cwh.git",
+                "reference": "6240e7f51da46e2469f719a4471133c03b364096"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.18",
@@ -464,7 +458,17 @@
                     "Maxbanton\\Cwh\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "check-syntax": [
+                    "vendor/bin/phpcs --standard=psr2 --ignore=Tests src/"
+                ],
+                "fix-syntax": [
+                    "vendor/bin/phpcbf --standard=psr2 src/"
+                ],
+                "tests": [
+                    "vendor/bin/phpunit"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -481,7 +485,11 @@
                 "cloudwatch",
                 "monolog"
             ],
-            "time": "2018-05-09T18:13:19+00:00"
+            "support": {
+                "issues": "https://github.com/maxbanton/cwh/issues",
+                "source": "https://github.com/maxbanton/cwh"
+            },
+            "time": "2018-09-27T18:31:57+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1812,7 +1820,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "maxbanton/cwh": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

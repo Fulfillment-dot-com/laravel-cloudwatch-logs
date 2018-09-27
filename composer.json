@@ -15,9 +15,16 @@
       }
     },
     "require": {
-        "maxbanton/cwh": "^1.1",
+        "maxbanton/cwh": "dev-invalidToken",
         "illuminate/support": "^5.1"
     },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/Fulfillment-dot-com/cwh.git"
+    }
+  ]
+  ,
     "extra": {
         "laravel": {
             "providers": [
