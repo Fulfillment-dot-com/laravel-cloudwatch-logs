@@ -96,7 +96,7 @@ class CloudWatchServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    private function getCredentials()
+    protected function getCredentials()
     {
         $loggingConfig = config('logging.channels');
 
